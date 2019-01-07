@@ -125,3 +125,12 @@ sitemap chromecast label="Chromecasts" {
     }
 }
 ```
+
+## Youtube Videos
+It is a known bug that youtube videos can not be played with the binding, however there is a workaround by using the execute command line binding:
+
+Replace XX with your Chromecast IP and change v=XXXXXX to the video you want
+
+```perl
+    executeCommandLine('curl -H “Content-Type:application/json” "http://192.168.XX.XX:8008/apps/YouTube" -X POST -d "v=dQw4w9WgXcQ"', 5000)
+```
